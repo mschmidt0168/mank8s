@@ -1,0 +1,23 @@
+---
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: app-<username>
+  labels:
+    app: app-<username>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-<username>
+  template:
+    metadata:
+      labels:
+        app: app-<username>
+    spec:
+      containers:
+        - name: helloworld
+          image: mbeham/hello_world:2.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

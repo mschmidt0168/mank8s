@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: console-mbeham
+  labels:
+    name: console-mbeham
+spec:
+  containers:
+    - name: console-mbeham
+      image: mbeham/console:1.0.0

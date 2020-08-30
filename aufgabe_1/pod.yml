@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: helloworld-<username>
+  labels:
+    name: helloworld-<username>
+spec:
+  containers:
+    - name: helloworld-<username>
+      image: mbeham/hello_world:1.0.0
+      imagePullPolicy: Always

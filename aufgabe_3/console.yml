@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: console-<username>
+  labels:
+    name: console-<username>
+spec:
+  containers:
+    - name: console-<username>
+      image: mbeham/console:1.0.0
+      imagePullPolicy: Always
